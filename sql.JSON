@@ -1,0 +1,89 @@
+{
+  "table_name": "users",
+  "columns": [
+    {
+      "column": "id",
+      "alias": "ID"
+    },
+    {
+      "column": "name",
+      "alias": "Name"
+    },
+    {
+      "column": "age",
+      "alias": "Age"
+    }
+  ],
+  "where_conditions": {
+    "logic_operator": "and",
+    "conditions": [
+      {
+        "logic_operator": "or",
+        "conditions": [
+          {
+            "column": "age",
+            "operator": ">",
+            "value": 18,
+            "type": "int"
+          },
+          {
+            "column": "name",
+            "operator": "like",
+            "value": "John%",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "logic_operator": "and",
+        "conditions": [
+          {
+            "logic_operator": "or",
+            "conditions": [
+              {
+                "column": "age",
+                "operator": ">",
+                "value": 18,
+                "type": "int"
+              },
+              {
+                "column": "name",
+                "operator": "like",
+                "value": "John%",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "logic_operator": "or",
+            "conditions": [
+              {
+                "column": "age",
+                "operator": ">",
+                "value": 18,
+                "type": "int"
+              },
+              {
+                "column": "name",
+                "operator": "like",
+                "value": "John%",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "logic_operator": "and",
+        "conditions": [
+          {
+            "column": "salary",
+            "operator": ">",
+            "value": 5000,
+            "type": "int"
+          }
+        ]
+      }
+    ]
+  }
+}
